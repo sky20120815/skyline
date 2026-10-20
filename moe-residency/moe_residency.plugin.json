@@ -1,0 +1,18 @@
+{
+  "capabilities": [
+    "expert-residency-policy",
+    "domain-profile-prefetch",
+    "bit-exact-verification"
+  ],
+  "entry_point": "moe_residency.plugin:ResidencyPlugin",
+  "license": "MIT",
+  "modes": [
+    "lru",
+    "slru",
+    "prefetch",
+    "pinned",
+    "pinned_prefetch"
+  ],
+  "name": "moe-residency",
+  "version": "0.1.0"
+}

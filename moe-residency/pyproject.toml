@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moe-residency"
+version = "0.1.0"
+description = "Bit-exact expert residency policies for MoE offloading engines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "moe-residency contributors" }]
+keywords = ["moe", "mixture-of-experts", "offloading", "inference", "expert-cache", "bit-exact"]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.entry-points."moe_residency.plugins"]
+moe-residency = "moe_residency.plugin:load_plugin"
+
+[project.urls]
+Homepage = "https://github.com/sky20120815/moe-residency"
+Repository = "https://github.com/sky20120815/moe-residency"
+Issues = "https://github.com/sky20120815/moe-residency/issues"
+Changelog = "https://github.com/sky20120815/moe-residency/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
